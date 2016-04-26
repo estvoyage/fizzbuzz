@@ -1,0 +1,32 @@
+{
+    "name": "fizzbuzz",
+    "description": "A kata for a coding dojo",
+    "type": "project",
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "Frédéric Hardy",
+            "email": "frederic.hardy@mageekbox.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "url": "https://github.com/atoum/atoum.git",
+            "type": "git"
+        }
+    ],
+    "require-dev": {
+        "atoum/atoum": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "fizzbuzz\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "fizzbuzz\\tests\\units\\": "tests/units"
+        }
+    }
+}
