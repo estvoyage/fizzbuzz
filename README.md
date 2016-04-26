@@ -34,7 +34,7 @@ In fact, using east-oriented principle force using *abstraction* and the lack of
 ## Unit Tests
 
 This kata was implemented using TDD, aka Test Driven Development.
-To execute unit tests, install *FizzBuzz* using Composer with the `--dev` option:
+To execute unit tests, install *FizzBuzz* using [Composer](https://getcomposer.org) with the `--dev` option:
 
 ```
 $ composer install --dev
@@ -46,10 +46,25 @@ Run it using **atoum**:
 $ vendor/bin/atoum
 ```
 
+## FAQ
+
+### Why there is a statement `return $this->value;` in `fizzbuzz\output\value::__toString()`?
+
+[PHP](http://www.php.net) is not a true object oriented programming language: its primary types are not object.  
+So you must use magic method like `__toString()` to simulate a string object.
+
+### What is `fizzbuzz\nill`?
+
+It's an implementation of the [null object pattern](https://en.wikipedia.org/wiki/Null_Object_pattern).
+
 ## License
 
 This *FizzBuzz* implementation is released under the FreeBSD License, see the bundled `COPYING` file for details.
 
 ## Greetings
 
-Thanks to [Norsys](http://www.norsys.fr) for wifi and room, and [Lyon Tech Hub](http://www.lyontechhub.org) for support and organization.
+Thanks to:
+
+- [Norsys](http://www.norsys.fr) for wifi and room;
+- [Lyon Tech Hub](http://www.lyontechhub.org) for support and organization;
+- Matteo Vaccari & Antonio Carpentieri for [The Open/Closed Principle Dojo](http://fr.slideshare.net/xpmatteo/20101125-ocpxpday).
