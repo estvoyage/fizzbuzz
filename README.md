@@ -13,7 +13,7 @@ And *fizzbuzz* use [composer](https://getcomposer.org) as dependencies manager.
 
 ## How to use it?
 
-Install *FizzBuzz* dependencies using [Composer](https://getcomposer.org), from the root directory, just do:
+Install *FizzBuzz* dependencies using [Composer](https://getcomposer.org), just do from the root directory:
 
 ```
 $ composer install
