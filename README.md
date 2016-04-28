@@ -13,13 +13,13 @@ And *fizzbuzz* use [composer](https://getcomposer.org) as dependencies manager.
 
 ## How to use it?
 
-Install *FizzBuzz* dependencies using [Composer](https://getcomposer.org):
+Install *FizzBuzz* dependencies using [Composer](https://getcomposer.org), from the root directory, just do:
 
 ```
 $ composer install
 ```
 
-After that, just do `php run.php` in the root directory.
+After that, just do `php run.php` from the root directory.
 
 ## Code organization
 
