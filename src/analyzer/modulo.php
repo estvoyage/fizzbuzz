@@ -21,7 +21,10 @@ class modulo
 
 	function analyzerControllerHasNumber(fizzbuzz\analyzer\controller $controller, fizzbuzz\number $number)
 	{
-		$number->ifHasModulo($this->modulo, function() use ($controller) { $controller->outputValueOfNumberIs($this->outputValue); });
+		$number->ifHasModulo($this->modulo, function() use ($controller) {
+				$controller->outputValueOfNumberIs($this->outputValue);
+			}
+		);
 
 		return $this;
 	}
