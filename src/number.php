@@ -18,7 +18,7 @@ class number
 
 	function ifHasModulo(number\modulo $modulo, callable $callable)
 	{
-		return self::expressionForCallableIs($this->value % $modulo->value == 0, $callable);
+		return $this->expressionForCallableIs($this->value % $modulo->value == 0, $callable);
 	}
 
 	function ifIsEqualToNumber(self $number, callable $callable)
