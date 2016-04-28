@@ -6,6 +6,11 @@ FizzBuzz is a kata posted on [codingdojo.org](http://codingdojo.org/cgi-bin/inde
 According to this site, Michael Feathers and EmilyBache performed it at agile2008 when competing in "Programming with the stars" in [python](https://www.python.org), in 4 minutes.  
 It was using the 04-27-2016 in Lyon, France, at [Norsys](http://www.norsys.fr) to illustrate [east-oriented programming](http://jamesladdcode.com/?p=12).
 
+## Requierements
+
+PHP version used to develop *fizzbuzz* was PHP 5.6.18, but minimal version is PHP 5.5.  
+And *fizzbuzz* use [composer](https://getcomposer.org) as dependencies manager.
+
 ## How to use it?
 
 Install *FizzBuzz* dependencies using [Composer](https://getcomposer.org):
@@ -18,6 +23,7 @@ After that, just do `php run.php` in the root directory.
 
 ## Code organization
 
+The main file is `run.php` in the root directory.  
 All classes are in the `src` directory.  
 All unit tests are ine the `tests\units\src` directory.  
 Fizzbuzz use [PSR-4](http://www.php-fig.org/psr/psr-4/) autoloader, so if you want read the code of:
