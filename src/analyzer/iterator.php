@@ -7,5 +7,5 @@ use
 interface iterator
 {
 	function recipientOfAnalyzerIs(iterator\recipient $recipient);
-	function booleanAboutContinuationOfIterationIs(boolean $boolean);
+	function recipientOfAnalyzerGoAway();
 }

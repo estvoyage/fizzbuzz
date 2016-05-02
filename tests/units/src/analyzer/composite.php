@@ -44,19 +44,19 @@ class composite extends units\test
 				$this->calling($analyzerIterator)->recipientOfAnalyzerIs = function($recipient) use ($analyzerIterator, $aAnalyzer, $bAnalyzer, & $continue) {
 					$recipient->iteratorHasAnalyzer($analyzerIterator, $aAnalyzer);
 
-					$continue->ifTrue(function() use ($recipient, $analyzerIterator, $bAnalyzer) {
-							$recipient->iteratorHasAnalyzer($analyzerIterator, $bAnalyzer);
-						}
-					);
+					if ($continue)
+					{
+						$recipient->iteratorHasAnalyzer($analyzerIterator, $bAnalyzer);
+					}
 				},
-				$this->calling($analyzerIterator)->booleanAboutContinuationOfIterationIs = function($boolean) use (& $continue) {
-					$continue = $boolean;
+				$this->calling($analyzerIterator)->recipientOfAnalyzerGoAway = function() use (& $continue) {
+					$continue = false;
 				},
 
 				$controller = new mockOfFizzbuzz\analyzer\controller,
 				$controllerNumber = new number,
 
-				$continue = new boolean\true
+				$continue = true
 			)
 			->if(
 				$this->newTestedInstance($analyzerIterator)

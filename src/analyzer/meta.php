@@ -3,8 +3,7 @@
 use
 	fizzbuzz\analyzer,
 	fizzbuzz\number,
-	fizzbuzz\output,
-	fizzbuzz\boolean
+	fizzbuzz\output
 ;
 
 class meta
@@ -33,7 +32,7 @@ class meta
 			$analyzer->analyzerControllerHasNumber($meta, $number);
 
 			$meta->outputValue->ifIsNotEmptyOutputValue(function() use ($iterator) {
-					$iterator->booleanAboutContinuationOfIterationIs(new boolean\false);
+					$iterator->recipientOfAnalyzerGoAway();
 				}
 			);
 		};

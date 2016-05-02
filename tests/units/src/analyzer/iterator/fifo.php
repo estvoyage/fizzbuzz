@@ -51,7 +51,7 @@ class fifo extends units\test
 				$this->calling($recipient)->iteratorHasAnalyzer = function($iterator, $analyzer) use (& $iteratorForRecipient) {
 					$iteratorForRecipient = $iterator;
 
-					$iterator->booleanAboutContinuationOfIterationIs(new boolean\false);
+					$iterator->recipientOfAnalyzerGoAway();
 				}
 			)
 			->if(
@@ -79,8 +79,8 @@ class fifo extends units\test
 				$this->newTestedInstance
 			)
 			->then
-				->object($this->testedInstance->booleanAboutContinuationOfIterationIs($boolean))
-					->isEqualTo($this->newTestedInstance)
+				->object($this->testedInstance->recipientOfAnalyzerGoAway())
+					->isTestedInstance
 		;
 	}
 }

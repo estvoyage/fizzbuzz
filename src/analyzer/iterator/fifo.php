@@ -38,9 +38,9 @@ class fifo
 		return $this;
 	}
 
-	function booleanAboutContinuationOfIterationIs(boolean $boolean)
+	function recipientOfAnalyzerGoAway()
 	{
-		$boolean->ifFalse(function() { $this->break = true; });
+		$this->break = true;
 
 		return $this;
 	}

@@ -43,25 +43,25 @@ class meta extends units\test
 				$this->calling($iterator)->recipientOfAnalyzerIs = function($recipient) use ($iterator, & $continue, $aAnalyzer, $bAnalyzer, $cAnalyzer) {
 					$recipient->iteratorHasAnalyzer($iterator, $aAnalyzer);
 
-					$continue->ifTrue(function() use ($iterator, & $continue, $recipient, $bAnalyzer, $cAnalyzer) {
+					if ($continue)
+					{
 							$recipient->iteratorHasAnalyzer($iterator, $bAnalyzer);
 
-							$continue->ifTrue(function() use ($iterator, $recipient, $cAnalyzer) {
-									$recipient->iteratorHasAnalyzer($iterator, $cAnalyzer);
-								}
-							);
-						}
-					);
+							if ($continue)
+							{
+								$recipient->iteratorHasAnalyzer($iterator, $cAnalyzer);
+							}
+					}
 				},
-				$this->calling($iterator)->booleanAboutContinuationOfIterationIs = function($boolean) use (& $continue) {
-					$continue = $boolean;
+				$this->calling($iterator)->recipientOfAnalyzerGoAway = function() use (& $continue) {
+					$continue = false;
 				},
 
 				$controller = new mockOfFizzbuzz\analyzer\controller,
 
 				$number = new mockOfFizzbuzz\number,
 
-				$continue = new boolean\true
+				$continue = true
 			)
 			->if(
 				$this->newTestedInstance($iterator)

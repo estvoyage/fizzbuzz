@@ -4,7 +4,6 @@ use
 	fizzbuzz\analyzer,
 	fizzbuzz\number,
 	fizzbuzz\output,
-	fizzbuzz\boolean,
 	fizzbuzz\nill
 ;
 
@@ -48,7 +47,7 @@ class composite
 							$composite->outputValue = new output\value;
 
 							$iterator
-								->booleanAboutContinuationOfIterationIs(new boolean\false)
+								->recipientOfAnalyzerGoAway()
 							;
 						}
 					)
